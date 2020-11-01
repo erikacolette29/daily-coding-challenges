@@ -25,11 +25,10 @@ You may choose to do more than one per day, or none at all - just don't fall too
 
 1. Fork this repo into your GHE account by clicking the **[Fork]** button in the top-right of the page.
 
-2. Since you cannot have nested repos, be sure to move outside of the class, or any other repo before the next step.
+2. Use the alias you made earlier (probably `sei`) to move into your **~/code/sei** directory.
 
-3. To bring the materials in the repo into your computer, clone *your fork* of the repo by copying the URL shown when you click the **[Clone or download]**: `$ git clone <the copied URL>`
+3. To bring the materials in the repo into your computer, clone *your fork* of the repo by copying the URL shown when you click the **[Clone or download]**: `git clone <the copied URL>`
 
-4. Slack your instructors the link to your fork so that they can monitor your progress.
 
 ## Instructions
 
@@ -49,6 +48,6 @@ You may choose to do more than one per day, or none at all - just don't fall too
 
 ## Committing and Pushing your Work
 
-- Your instructors will be checking your progress from time-to-time. As you solve the challenges, commit your work, and `$ git push origin master`. This pushes the updates to your fork.
+- Your instructors will be checking your progress from time-to-time. As you solve the challenges, commit your work, and `git push origin main`. This pushes the updates to your fork.
 
 

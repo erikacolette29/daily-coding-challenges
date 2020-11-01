@@ -359,9 +359,9 @@ describe("28-gridTrip", function () {
     expect(Array.isArray(gridTrip([0, 0], 'U1'))).toBe(true);
   });
   it("returns the correct final position", function () {
-    expect(gridTrip([0, 0], 'U2R1')).toEqual([2, 1])
-    expect(gridTrip([5, 10], 'D5L15U2')).toEqual([2, -5])
-    expect(gridTrip([-22, 100], 'L2L15D50U1D9')).toEqual([-80, 83])
+    expect(gridTrip([0, 0], 'U2R1')).toEqual([1, 2])
+    expect(gridTrip([10, 5], 'D5L15U2')).toEqual([-5, 2])
+    expect(gridTrip([100, -22], 'L2L15D50U1D9')).toEqual([83, -80])
   });
 });
 
