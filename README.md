@@ -23,14 +23,12 @@ You may choose to do more than one per day, or none at all - just don't fall too
 
 ## Set Up
 
-1. Clone this repo onto your computer by clicking the **Clone or download** button towards top-right of this page. This will reveal a URL, which you should copy.
+1. Fork this repo into your GHE account by clicking the **[Fork]** button in the top-right of the page.
 
 2. Use the alias you made earlier (probably `sei`) to move into your **~/code/sei** directory.
 
-3. To bring the materials in the repo onto your computer, clone the repo by using this command: 
-   ```bash
-   git clone <the copied URL>
-   ```
+3. To bring the materials in the repo into your computer, clone *your fork* of the repo by copying the URL shown when you click the **[Clone or download]**: `git clone <the copied URL>`
+
 
 ## Instructions
 

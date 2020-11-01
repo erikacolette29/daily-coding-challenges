@@ -44,8 +44,8 @@ Difficulty: Basic
 
 Prompt:
 
-Write a function called addTwoNumbers that accepts two numeric arguments and returns the sum of those two numbers.
-If either argument is not a Number, return the value of NaN.
+- Write a function called addTwoNumbers that accepts two numeric arguments and returns the sum of those two numbers.
+- If either argument is not a number, return the value of NaN.
 
 Examples:
 
