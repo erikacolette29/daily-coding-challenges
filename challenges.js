@@ -40,7 +40,7 @@ addOne(-5) //=> -4
 /*-----------------------------------------------------------------------------
 Challenge: 02-addTwoNumbers
 
-Difficulty: Basic  
+Difficulty: Basic
 
 Prompt:
 
@@ -63,7 +63,7 @@ addTwoNumbers('Hello', 5) //=> NaN
 /*-----------------------------------------------------------------------------
 Challenge: 03-sumNumbers
 
-Difficulty: Basic  
+Difficulty: Basic
 
 Prompt:
 
@@ -114,8 +114,8 @@ Difficulty: Basic
 Prompt:
 
 - Write a function named computeRemainder that accepts two numeric arguments and returns the remainder of the division of those two numbers.
-- The first argument should be the dividend and the second argument should be the divisor.
-- If a 0 is passed in as the second argument you should return JavaScript's special numeric value: Infinity.
+- The first argument should be the dividend, and the second argument should be the divisor.
+- If a 0 is passed in as the second argument, you should return JavaScript's special numeric value: Infinity.
 - For extra fun, complete this challenge without using the modulus (%) operator.
 
 Examples:
@@ -138,7 +138,7 @@ Difficulty: basic
 Prompt:
 
 - Write a function called range that accepts two integers as arguments and returns an array of integers starting with the first argument up to one less than the second argument.
-- The range function must be called with the first argument less than or equal to the second argument, otherwise return the string "First argument must be less than second".
+- The range function must be called with the first argument less than or equal to the second argument; otherwise, return the string "First argument must be less than second".
 
 Examples:
 
@@ -160,7 +160,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse orderand converts all characters to uppercase.
+Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse order and converts all characters to uppercase.
 
 Examples:
 
@@ -179,7 +179,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called removeEnds that accepts a single string argument, then returns the a string with the first and last characters removed.
+- Write a function called removeEnds that accepts a single string argument, then returns a string with the first and last characters removed.
 - If the length of the string argument is less than 3, return an empty string.
 
 Examples:
@@ -201,9 +201,9 @@ Difficulty: Basic
 Prompt:
 
 - Write a function named charCount that accepts a single string argument and returns an object that represents the count of each character in the string.
-- The returned object should have keys that represent the character with its value set to the how many times the character appears in the string argument.
+- The returned object should have keys representing the character with its value set to the number of times the character appears in the string argument.
 - Upper and lower case characters should be counted separately.
-- Space characters should be count too.
+- Space characters should be counted too.
 
 Examples:
 
@@ -250,7 +250,7 @@ Difficulty: Intermediate
 Prompt:
 
 - Write a function called isPalindrome that accepts a single string argument, then returns true or false depending upon whether or not the string is a palindrome.
-- A palindrome is a word or phrase that are the same forward or backward.
+- A palindrome is a word or phrase that is the same forward or backward.
 - Casing and spaces are not included when considering whether or not a string is a palindrome.
 - If the length of the string is 0 or 1, return true.
 
@@ -274,9 +274,9 @@ Difficulty: Intermediate
 
 Prompt:
 
-In information theory, the hamming distance refers to the count of the differences between two strings of equal length.  It is used in computer science for such things as implementing "fuzzy search"  capability.
+In information theory, the hamming distance refers to the count of the differences between two strings of equal length. It is used in computer science for such things as implementing a "fuzzy search" capability.
 
-- Write a function named hammingDistance that accepts two arguments which are both strings of equal length.
+- Write a function named hammingDistance that accepts two arguments, which are both strings of equal length.
 - The function should return the count of the symbols (characters, numbers, etc.) at the same position within each string that are different.
 - If the strings are not of the same length, the function should return NaN.
 
@@ -301,7 +301,7 @@ Difficulty: Intermediate
 Prompt:
 
 - Write a function called mumble that accepts a single string argument.
-- The function should return a string that has each character repeated the number of times according to its position within the string arg.  In addition, each repeated section of characters should be separated by a hyphen (-).
+- The function should return a string that has each character repeated the number of times according to its position within the string arg. Additionally, each repeated section of characters should be separated by a hyphen (-).
 - Examples describe it best..
 
 Examples:
@@ -326,7 +326,7 @@ Prompt:
 
 - Write a function named fromPairs that creates an object from an array containing nested arrays.
 - Each nested array will have two elements representing key/value pairs used to create key/value pairs in an object to be returned by the function.
-- If a key appears in multiple pairs, the rightmost pair should overwrite previous the previous entry in the object.
+- If a key appears in multiple pairs, the rightmost pair should overwrite the previous entry in the object.
 
 Examples:
 
@@ -342,7 +342,7 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
@@ -351,9 +351,9 @@ Prompt:
 
 Examples:
 
-mergeObjects({}, {a: 1});  //=> {a: 1} (same object as first arg)
-mergeObjects({a: 1, b: 2, c: 3}, {d: 4});  //=> {a: 1, b: 2, c: 3, d: 4}
-mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c: 3, d: 44}
+mergeObjects({}, {a: 1}); //=> {a: 1} (same object as first arg)
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}); //=> {a: 1, b: 2, c: 3, d: 4}
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}); //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
 
@@ -364,16 +364,16 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c:
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
 
-Difficulty:  Intermediate  
+Difficulty: Intermediate
 
 Prompt:
 
 - Write a function named findHighestPriced that accepts a single array of objects.
 - The objects contained in the array are guaranteed to have a price property holding a numeric value.
-- The function should return the object in the array that has the largest value held in the price property.
+- The function should return the object in the array with the largest value held in the price property.
 - If there's a tie between two or more objects, return the first of those objects in the array.
 - Return the original object, not a copy.
-- Do not mutate the array being passed in.
+- Do not mutate the array that is passed in.
 
 Examples:
 
@@ -402,22 +402,23 @@ findHighestPriced([
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-The goal is of this challenge is to write a function that performs the functionality of JavaScript's Array.prototype.map method.
+The goal of this challenge is to write a function that performs the functionality of JavaScript's Array.prototype.map method.
 
 - Write a function named mapArray that accepts two arguments: a single array and a callback function.
 - The mapArray function should return a new array of the same length as the array argument.
-- The mapArray function should iterate over each element in the array (first arg).  For each iteration, invoke the callback function (2nd arg), passing to it as arguments, the current element and its index.  Whatever is returned by the callback function should be included in the new array at the index of the current iteration.
+- The mapArray function should iterate over each element in the array (first arg). For each iteration, invoke the callback function (2nd arg), passing to it as arguments, the current element, and its index.
+- Whatever is returned by the callback function should be included in the new array at current iteration's index.
 
 Examples:
 
 mapArray( [1, 2, 3], function(n) {
   return n * 2;
 } );
-//=> [2, 4, 6]  (a new array)
+//=> [2, 4, 6] (a new array)
 
 mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
   return `${i + 1} - ${f}`;
@@ -433,16 +434,16 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 /*-----------------------------------------------------------------------------
 Challenge: 18-reduceArray
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-The goal is of this challenge is to write a function that performs the functionality of JavaScript's Array.prototype.reduce method.
+The goal of this challenge is to write a function that performs the functionality of JavaScript's Array.prototype.reduce method.
 
 - Write a function named reduceArray that accepts three arguments: (1) an array; (2) a callback function; and (3) a value used as the initial value of the "accumulator".
 - The reduceArray function should return whatever is returned by the callback function on the last iteration.
-- The reduceArray function should iterate over each element in the array (first arg).  For each iteration, invoke the callback function (2nd arg), passing to it three arguments: (1) the "accumulator", which is the value returned by the callback during the previous iteration; (2) the  current element; and (3) the index of the current iteration.
-- On the first iteration, provide the third argument provided to reduceArray as the first argument when invoking the callback, then for subsequent iterations, provide the value returned by the callback during the previous iteration.
+- The reduceArray function should iterate over each element in the array (first arg). For each iteration, invoke the callback function (2nd arg), passing to it three arguments: (1) the "accumulator", which is the value returned by the callback during the previous iteration; (2) the current element; and (3) the index of the current iteration.
+- On the first iteration, provide the third argument passed to reduceArray as the first argument when invoking the callback. For subsequent iterations, provide the value returned by the callback during the previous iteration.
 
 Examples:
 
@@ -471,24 +472,24 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 /*-----------------------------------------------------------------------------
 Challenge: 19-flatten
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
 - Write a function named flatten that accepts a single array that may contain nested arrays and returns a new "flattened" array.
 - A flattened array is an array that contains no nested arrays.
-- Arrays maybe nested at any level.
-- If any of the arrays have duplicate values those duplicate values should be present in the returned array.
-- The values in the new array should maintain their ordering as shown in the examples below.
+- Arrays may be nested at any level.
+- If any of the arrays have duplicate values, those duplicate values should be present in the returned array.
+- The values in the new array should maintain their ordering, as shown in the examples below.
 
 Hint:
 
-- This assignment provides an excellent opportunity to use recursion (a function that calls itself).  It can also be solved by using an inner function.
+- This assignment provides an excellent opportunity to use recursion (a function that calls itself). You can also solve it by using an inner function.
 
 Examples:
 
 flatten( [1, [2, 3]] );
-//=> [1, 2, 3]  (a new array) 
+//=> [1, 2, 3] (a new array) 
 
 flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
@@ -530,7 +531,7 @@ Difficulty: Intermediate
 
 Prompt:
 
-Now that you have solved the last challenge of determining if a whole number is prime, let's expand upon that concept to...
+Now that you have solved the last challenge of determining if a whole number is a prime number, expand upon that concept to:
 - Write a function named primeFactors that accepts a whole number greater than one (1) as an argument and returns an array of that argument's prime factors.
 - The prime factors of a whole number are the prime numbers that, when multiplied together, equals the whole number.
 - If the argument provided is not greater than 1, or not a whole number, then primeFactors should return an empty array.
@@ -558,10 +559,10 @@ Difficulty: Intermediate
 
 Prompt:
 
-- Write a function named intersection that accepts two arguments which are both arrays.  The array arguments may contain any mixture of strings, numbers and/or booleans - but no reference types, i.e., objects.
+- Write a function named intersection that accepts two arguments, which are both arrays. The array arguments may contain any mixture of strings, numbers, or booleans - but no reference types (objects).
 - The function should return a new array containing all elements in common, including repeating element values.
-- The ordering of the elements in the returned is not important.
-- If there are no elements in the arrays in common,  the intersection function should return an empty array.
+- The ordering of the elements in the returned array is not important.
+- If there are no elements in the arrays in common, the intersection function should return an empty array.
 - The function should not mutate (change) either argument.
 
 Examples:
@@ -579,14 +580,14 @@ intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 /*-----------------------------------------------------------------------------
 Challenge: 23-balancedBrackets
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-- Write a function called balancedBrackets that accepts a single string as argument.
-- The input string is composed entirely of parentheses, brackets and/or curly braces, i.e.,  (), [] and/or {}. Referred to as "braces" from this point forward...
-- The balancedBraces function should return true if the string's braces are "balanced" and false if they are not.
-- The brackets are considered unbalanced if any closing bracket does not close the same type of opening bracket, ignoring already matched brackets between them.  Examples explain it best...
+- Write a function called balancedBrackets that accepts a single string as an argument.
+- The input string is composed entirely of parentheses, brackets, or curly braces, i.e., (), [], or {}. Referred to as "braces" from this point forward.
+- The balancedBrackets function should return true if the string's braces are "balanced" and false if they are not.
+- The brackets are considered unbalanced if any closing bracket does not close the same type of opening bracket, ignoring already matched brackets between them. These examples may explain it best:
 
 Examples:
 
@@ -605,12 +606,12 @@ balancedBrackets( '[({}[])]' ) // => true
 /*-----------------------------------------------------------------------------
 Challenge: 24-isWinningTicket
 
-Difficulty:  Intermediate
+Difficulty:Intermediate
 
 Prompt:
 
-- Write a function called isWinningTicket that accepts a single array an as argument.
-- The input array represents a 'lottery ticket' consisting of one or more nested 2-value arrays.  The first value of a nested array will be a string, the second an integer.
+- Write a function called isWinningTicket that accepts a single array as an argument.
+- The input array represents a 'lottery ticket' consisting of one or more nested 2-value arrays. The first value of a nested array will be a string, the second an integer.
 - The isWinningTicket function should return true if all of the nested arrays have a character in the string whose numeric character code equals the integer (2nd value).
 - If any of the nested arrays have a string where all of the character's character code does not match the integer, then return false.
 
@@ -635,18 +636,18 @@ isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] ) // => false
 /*-----------------------------------------------------------------------------
 Challenge: 25-getNumForIP
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-- Write a function called getNumForIP that accepts a single string as argument.
-- The input string is formatted as an IP address, such as '192.156.99.15'.  IP addresses are used in networking and are actually 32-bit integers.  However, those that work with networks find it more convenient to work with these numbers as four 8-bit integers, separated by a 'dot' character.
+- Write a function called getNumForIP that accepts a single string as an argument.
+- The input string is formatted as an IPv4 address used in networking, such as '192.156.99.15'. To the computer, IP addresses are 32-bit binary numbers. However, people usually find it more convenient to work with these numbers as four sets of 8-bit integers in their decimal form. Each set is separated by a '.' character.
 - The getNumForIP function should return the numeric value of the string IP address being passed in as an argument.
 
 Hints:
 
-- Each 8-bit number can hold a value between 0 and 256.
-- An IP's right most 8-bit number represents how many of 256 raised to the power of 0 (equals 1) there are.  The next 8-bit number represents how many of 256 raised to the power of 1 (256) there are, etc.  For example, if you took the right-most two 8-bit numbers of the IP address 192.156.99.15, you would have 15 * (256 ** 0), which equals 15, and 99 * (256**1), which equals 25344.
+- Each 8-bit number can hold a value between 0 and 255.
+- An IP's right most 8-bit number represents how many of 256 raised to the power of 0 (equals 1) there are. The next 8-bit number represents how many of 256 raised to the power of 1 (256) there are, etc. For example, if you took the right-most two 8-bit numbers of the IP address 192.156.99.15, you would have 15 * (256 ** 0), which equals 15, and 99 * (256**1), which equals 25344.
 - To compute the numeric value for an IP address, you first compute the value for each of the four 8-bit chunks (as described in the above hint), and add them together!
 
 Examples:
@@ -665,11 +666,11 @@ getNumForIP( '10.0.0.1' ) // => 167772161
 /*-----------------------------------------------------------------------------
 Challenge: 26-toCamelCase
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-- Write a function called toCamelCase that accepts a single string as argument.
+- Write a function called toCamelCase that accepts a single string as an argument.
 - The toCamelCase function should return the string as camel-cased, removing each _ or - characters and capitalizing the character following the _ or -.
 - If the string argument does not contain a "_" or a "-", return the same string.
 
@@ -694,17 +695,17 @@ toCamelCase( 'A_b_c' ) // => 'ABC'
 /*-----------------------------------------------------------------------------
 Challenge: 27-countTheBits
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
 - Write a function called countTheBits that accepts a single numeric argument that will be an integer.
-- The function should return the number of bits that are set to 1 in the number's binary representation.
+- The function should return the number of bits set to 1 in the number's binary representation.
 
 Hints:
 
-- We typically work with "decimal" numbers on a daily basis. Decimal is "base 10", where there are 10 digits available - 0 thru 9.  However, it's binary that computers understand - 1's and 0's.  The 1's and 0's are called bits.
-- As an example, the decimal value of 13 is represented in binary as 1101.  There are 3 one bits and 1 zero bit in the decimal number of 13.
+- We typically work with "decimal" numbers daily. Decimal is "base 10", where there are 10 digits available - 0 thru 9. However, it's binary that computers understand - 1's and 0's. The 1's and 0's are called bits.
+- As an example, the decimal value of 13 is represented in binary as 1101. There are 3 one bits and 1 zero bit in the decimal number of 13.
 - Carefully read the documentation for the Number.prototype.toString method.
 
 Examples:
@@ -713,7 +714,7 @@ countTheBits( 0 ) // => 0
 countTheBits( 13 ) // => 3
 countTheBits( 256 ) // => 1
 countTheBits( 255 ) //=> 8
-countTheBits( 65535 )  //=> 16
+countTheBits( 65535 ) //=> 16
 -----------------------------------------------------------------------------*/
 // Your solution for 27-countTheBits here:
 
@@ -724,24 +725,25 @@ countTheBits( 65535 )  //=> 16
 /*-----------------------------------------------------------------------------
 Challenge: 28-gridTrip
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
-- This challenge uses an imaginary grid where the x coordinate increases when you move 'up' and decreases when you move 'down'.  Similarly, the y coordinate increases when you move 'right' and decreases when you move 'left'.
+- This challenge uses an imaginary grid where the y coordinate increases when you move up and decreases when you move down. Similarly, the x coordinate increases when you move right and decreases when you move left.
 - Write a function called gridTrip that accepts two arguments.
-- The first argument is an array containing two integers.  The first represents the starting x position on the grid.  The second integer in the array represents the starting y position.
-- The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to represent moving Up, Down, Right & Left respectively.  Each direction character will be followed by digits representing how many units to move in that direction.  For example, a string of 'D15R2U4' represents moving up 15 units, to the right 2 units, and finally, down 4 units.  The direction characters will always be upper case.
-- The gridTrip function should return a new array of two integers: the final x position and the final y position.  Do not modify the array argument).
+- The first argument is an array containing two integers. The value in the first index of the array represents the starting x position on the grid. The second value in the array represents the starting y position.
+- The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to mean moving Up, Down, Right & Left, respectively. Each direction character is followed by digits representing how many units to move in that direction. For example, a string of 'D15R2U4' moves up 15 units, right 2 units, and finally, down 4 units from the starting coordinates.
+- The direction characters will always be upper case.
+- The gridTrip function should return a new array of two integers: the final x position and the final y position. Do not modify the array argument).
 
 Hint:
-- Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction.  Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
+- Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction. Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
 
 Examples:
 
 gridTrip( [0, 0], 'U2R1' ) // => [2, 1]
-gridTrip( [5, 10], 'D5L15U2' ) //-> [2, -5]
-gridTrip( [-22, 100], 'L2L15D50U1D9') //=> [-80, 83]
+gridTrip( [10, 5], 'D5L15U2' ) //-> [-5, 2]
+gridTrip( [100, -22], 'L2L15D50U1D9') //=> [83, -80]
 -----------------------------------------------------------------------------*/
 // Your solution for 28-gridTrip here:
 
@@ -752,19 +754,19 @@ gridTrip( [-22, 100], 'L2L15D50U1D9') //=> [-80, 83]
 /*-----------------------------------------------------------------------------
 Challenge: 29-addChecker
 
-Difficulty:  Intermediate
+Difficulty: Intermediate
 
 Prompt:
 
 - Write a function called addChecker that accepts two arguments.
-- The first argument is an array containing at least two integers.  The integers in the array are sorted in ascending order.
+- The first argument is an array containing at least two integers. The integers in the array have been pre-sorted in ascending order.
 - The second argument is an integer.
-- The addChecker function should return true if there are two integers in the array of integers (first argument) that when added together, equals the integer passed in as the second argument.
-- If there are no two integers in the array that sum up to equal the second argument, addChecker should return false.
+- The addChecker function should return true if there are two integers in the array of integers (first argument) that, when added together, equals the integer passed in as the second argument.
+- If there are no two integers in the array with a sum equal to the second argument, addChecker should return false.
 
 Hint:
 
-- An efficient solution can leverage the the fact that the integers in the array are sorted.
+- An efficient solution can leverage the fact that the integers in the array come sorted for you.
 
 Examples:
 
@@ -782,19 +784,19 @@ addChecker( [10, 15, 16, 22], 19 ) // => false
 /*-----------------------------------------------------------------------------
 Challenge: 30-totalTaskTime
 
-Difficulty:  Difficult
+Difficulty: Difficult
 
 Prompt:
 
 - Write a function called totalTaskTime that accepts two arguments.
-- The first argument is an array of integers referred to as a "queue".  Each integer in the queue represents a "task", more specifically, the amount of time to complete that task.
+- The first argument is an array of integers referred to as a "queue". Each integer in the queue represents a "task" - specifically, the amount of time to complete that task.
 - The second argument is an integer representing the number of CPU "threads" available to process all of the tasks in the queue.
-- The totalTaskTime function should return an integer representing the total time it is going to take to complete all of the tasks in the queue.
+- The totalTaskTime function should return an integer representing the total time it will take to complete all of the tasks in the queue.
 - You may mutate the "queue" array (first argument) if you wish.
 
 Hint:
 
-- Solve it with paper and pencil first.  Look for patterns and generalize.  Pseudocode!
+- Solve it with paper and pencil first. Look for patterns and generalize. Pseudocode!
 
 Examples:
 
