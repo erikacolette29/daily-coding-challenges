@@ -59,8 +59,23 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
+// write a function, that accepts two arguments 
+// check if those arguments are both numbers
+// if either one is not a Number, return NaN
+// if both arguments are numbers, add them together and return sum
 
 
+function addTwoNumbers(num1, num2) {
+  
+  if (typeof num1 === 'number' && typeof num2 === 'number'){
+  return num1 + num2;
+
+  } else {
+    return NaN;
+  }
+
+}
+console.log(addTwoNumbers(5,6));
 
 
 /*-----------------------------------------------------------------------------
@@ -82,7 +97,9 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+function sumNumbers ([num1, num2, num3, num4]) {
+  return 
+}
 
 
 
