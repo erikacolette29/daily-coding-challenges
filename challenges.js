@@ -97,9 +97,25 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-function sumNumbers ([num1, num2, num3, num4]) {
-  return 
+
+
+const sumNumbers = (arr)=> {
+  let sum = 0
+  if(arr.legnth === 0){
+    return 0
+  }
+  else{
+    for(let i=0; i < arr.length; i++){
+      let num = arr[i]
+      sum +=num
+    }0;
+  }
+  return sum 
 }
+
+
+
+
 
 
 
