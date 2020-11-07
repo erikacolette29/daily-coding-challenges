@@ -101,7 +101,7 @@ sumNumbers([]) //=> 0
 
 const sumNumbers = (arr)=> {
   let sum = 0
-  if(arr.legnth === 0){
+  if(arr.length === 0){
     return 0
   }
   else{
@@ -112,11 +112,6 @@ const sumNumbers = (arr)=> {
   }
   return sum 
 }
-
-
-
-
-
 
 
 /*-----------------------------------------------------------------------------
@@ -138,9 +133,32 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
+// function addList(...arg){
+//   let sum = 0
+//   if(arg.length === 0){
+//     return 0
+//   } else {
+//   for (let i = 0; i < arg.length; i++){
+//     sum += arg[i]
+   
+//   }
+//   return sum
+// }
+// }
+
+// console.log(addList(5,8,2,3))
 
 
 
+function addList(...args){
+  let sum = 0
+    args.forEach(function(args){
+      sum += args
+    })
+    return sum
+  }
+  
+  console.log(addList(5,8,2,3))
 
 /*-----------------------------------------------------------------------------
 Challenge: 05-computeRemainder
