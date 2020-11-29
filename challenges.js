@@ -179,10 +179,11 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-
-
-
-
+function computeRemainder(dividend, divisor) {
+  if (divisor === 0) return Infinity;
+  return dividend - (Math.floor(dividend / divisor) * divisor);
+}
+ console.log(computeRemainder(43,8))
 
 /*-----------------------------------------------------------------------------
 Challenge: 06-range
@@ -203,10 +204,15 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+function range(a, b){
+if ( a > b) return "First argument must be less than second"
 
-
-
-
+let range = []
+for(var c = a; c < b; c++){
+  range.push(c)
+}
+return range 
+}
 /*-----------------------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
 
@@ -222,8 +228,14 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+function reverseUpcaseString(stri){
+let stringReversed = stri.split("").reverse().join("")
+let stringUpps = stringReversed.toUpperCase()
 
+  return stringUpps
+}
 
+reverseUpcaseString("back me")
 
 
 /*-----------------------------------------------------------------------------
@@ -244,9 +256,14 @@ removeEnds('a'); //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
+function removeEnds(st){
+  if(st.length < 3) return "";
+  let slice = st.slice(1, st.length -1)
+  return slice
 
+}
 
-
+removeEnds('amb')
 /*-----------------------------------------------------------------------------
 Challenge: 09-charCount
 
@@ -265,10 +282,23 @@ charCount('hello') //=> { h: 1, e: 1, l: 2, o: 1 }
 charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i: 2, s: 2, f: 1, n: 1, t: 2, c: 1, '!': 1 }
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
+function charCount(s) {
+let result = {}
+for(let i = 0; i < s.length; i++){
+  let char = s.charAt(i);
+  if (result[char]) {
+    result[char]++;
+  } else {
+    result[char] = 1;
+  }
 
+}
+return result;
 
+}
 
-
+charCount("Eeerrrrikaaa")
+//  return result[char]? result[char]++ : result[char] = 1 
 
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -292,7 +322,10 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
+function formatWithPadding(num, string, num2){
 
+  return
+}
 
 
 
