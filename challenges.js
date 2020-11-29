@@ -355,9 +355,46 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 
+function removeSpace(str) {
+str = str.toLowerCase();
+while (str.includes(' ')) str = str.replace(' ', '');
+
+for (i=0; i< str.length; i++) {
+  // if (str[i] == " ") {
+  //   return str.slice(i)
+  // }
+}
+}
+removeSpace("Hello there gorgeous")
 
 
 
+function isPalindrome(str){
+
+
+let text = str.split("")
+let caseSpace = text.filter((str)=> str.trim())
+console.log(caseSpace)
+
+let stringForw = caseSpace.join("")
+let stringForwd = stringForw.toLowerCase()
+console.log(stringForwd)
+let stringBack = caseSpace.reverse().join("")
+let stringBackd = stringBack.toLowerCase()
+console.log(stringBackd)
+
+if(stringForwd === stringBackd){
+  return true
+}else {
+  return false 
+}
+}
+
+
+isPalindrome('rotor'); //=> false
+// isPalindrome('rotor'); //=> true
+// isPalindrome('A nut for a jar of tuna'); //=> true
+// isPalindrome(''); //=> true
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
 
