@@ -366,9 +366,9 @@ function formatWithPadding(int, char, length) {
 }
 
 /*--- Using the padStart String method ---*/
-// function formatWithPadding(int, char, length) {
-//   return int.toFixed(0).padStart(length, char);
-// }
+function formatWithPadding(int, char, length) {
+  return int.toFixed(0).padStart(length, char);
+}
 
 
 /*-----------------------------------------------------------------

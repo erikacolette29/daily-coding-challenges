@@ -322,12 +322,16 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-function formatWithPadding(num, string, num2){
+function formatWithPadding(int, str, num2){
 
-  return
+ return int.toString().padStart(num2, str)
+//  if(formatInt >= num2){
+//    return formatInt
+//  }
+
 }
 
-
+formatWithPadding(42,'*', 10)
 
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
