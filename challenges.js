@@ -428,6 +428,19 @@ mumble('121'); //=> '1-22-111'
 mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+function mumble(string){
+  let repeat = "";
+  for(let i = 0; i <string.length; i++) {
+    repeat += string.charAt(i).repeat(i+1) + "-"
+     console.log(repeat)
+     
+  }
+  return repeat
+  
+  }
+  
+  
+  mumble('Erika')
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
