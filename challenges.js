@@ -431,7 +431,7 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 function mumble(string){
   let repeat = "";
   for(let i = 0; i <string.length; i++) {
-    repeat += string.charAt(i).repeat(i+1) + "-"
+    repeat += ((i || '') && '-') + string.charAt(i).repeat(i+1) 
      console.log(repeat)
      
   }
@@ -440,7 +440,7 @@ function mumble(string){
   }
   
   
-  mumble('Erika')
+  mumble('X')
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
@@ -458,7 +458,31 @@ Examples:
 fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 }
 fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------------------*/
-// Your solution for 14-fromPairs here:
+// Your solution for 14-fromPairs here: 
+
+
+function fromPairs(arr){
+  return Object.fromEntries(arr)
+}
+
+
+
+// function fromPairs(array){
+//   let pairs = ""
+//   let result = {}
+//   for(let i = 0; i < array.length; i++){
+//     for(let n = 0; n < array[i].length; n++){
+//       pairs = (array[i][0]+ ": " + array[i][1])
+//     }
+//     result = pairs
+//     console.log(result)
+//   }
+// }
+  
+
+
+
+  fromPairs([ ['name', "Sam"], ['age', 24], ['name', "Sally"] ]) 
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
@@ -477,6 +501,18 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}); //=> {a: 1, b: 2, c: 3, d: 4}
 mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}); //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
+
+
+function mergeObjects(target, ...objects){
+
+  return Object.assign(target, ...objects)
+
+}
+
+
+mergeObjects({}, {a: 1});
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}); 
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});
 
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
@@ -512,6 +548,34 @@ findHighestPriced([
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
+function findHighestPriced(array){
+
+
+return array.reduce((highest, each) => each.price > highest.price ? each : highest);
+
+
+}
+
+
+
+
+
+
+
+findHighestPriced([
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 5 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+]);
+findHighestPriced([
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 50 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+]);
+
+
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
 
@@ -539,6 +603,23 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 18-reduceArray
