@@ -607,6 +607,14 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 
 
 
+function mapArray(array, cb){
+let newArray = []
+  array.forEach(function(item, idx){
+  newArray.push( cb(item, idx))
+  }
+  ) 
+  return newArray
+}
 
 
 
@@ -614,14 +622,7 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 
 
 
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------
+/*--------------------------------------------------------------------------
 Challenge: 18-reduceArray
 
 Difficulty: Intermediate
@@ -655,6 +656,18 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
 
+
+function reduceArray(array, cb, iter){
+  let a = iter // just missed assigning variable
+  array.forEach(function(item, idx) {
+   a = cb(a, item, idx)
+
+  })
+  return a
+}
+
+
+
 /*-----------------------------------------------------------------------------
 Challenge: 19-flatten
 
@@ -681,6 +694,18 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
 -----------------------------------------------------------------------------*/
 // Your solution for 19-flatten here:
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 20-isPrime
@@ -725,6 +750,12 @@ primeFactors(105) //=> [3, 5, 7]
 primeFactors(200) //=> [2, 2, 2, 5, 5]
 -----------------------------------------------------------------------------*/
 // Your solution for 21-primeFactors here:
+
+// function primeFactors()
+
+
+
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 22-intersection
