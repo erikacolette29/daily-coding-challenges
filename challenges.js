@@ -560,8 +560,6 @@ return array.reduce((highest, each) => each.price > highest.price ? each : highe
 
 
 
-
-
 findHighestPriced([
   { sku: 'a1', price: 25 },
   { sku: 'b2', price: 5 },
@@ -697,10 +695,13 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 
 
 
+function flatten(array){
+  return array.flat(Infinity)
+}
 
 
-
-
+flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
+flatten( [1, [2, 3]] );
 
 
 
@@ -726,6 +727,19 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 20-isPrime here:
+//boolen return true prime, false not prime
+
+function isPrime(n) {
+  if (n < 2 || !Number.isInteger(n)) return false;
+  for (var i = 2; i <= n / 2; i++) {
+    if (Number.isInteger(n / i)) return false;
+  }
+  return true;
+}
+
+// STUDY this
+isPrime(4)
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 21-primeFactors
@@ -754,9 +768,30 @@ primeFactors(200) //=> [2, 2, 2, 5, 5]
 // function primeFactors()
 
 
+function primeFactors(num){
+ // - If the argument provided is not greater than 1, or not a whole number, then primeFactors should return an empty array.
+  let newArray = []
+  if(num < 2 || !Number.isInteger(num)){
+    return newArray
+  } 
+  //- The prime factors of a whole number are the prime numbers that, when multiplied together, equals the whole number.
+  var divisor = 2;
+    while (num >= divisor * divisor) {
+      if (Number.isInteger(num / divisor)) {
+        newArray.push(divisor);
+        num = num / divisor;
+      } else {
+        divisor++;
+      }
+    }
+    newArray.push(num);
+    return newArray;
+  }
 
 
 
+
+primeFactors(2)
 /*-----------------------------------------------------------------------------
 Challenge: 22-intersection
 
@@ -776,8 +811,40 @@ intersection(['a', 1], []) //=> []
 intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------------------*/
-// Your solution for 22-intersection here:
+// Your solution for 22-intersection here: //STUDYYYYY
+  
 
+// function intersection(arr1, arr2){
+// let newArr = []
+// if(!arr1[charAt] === arr1[charAt]){
+//   return newArr
+// }
+
+//   return newArr
+// }
+
+// function intersection(array1, array2){
+//   let arr = []
+// let filteredArray = array1.filter(item => array2.includes(item)) ? filteredArray : arr
+// }
+
+  // let newA = []
+
+function intersection(a1,a2){
+ 
+  let common = []
+  var _a2 = [...a2]; // new copy of array
+  a1.forEach(val => {
+    var idx = _a2.indexOf(val);
+    if (idx > -1) common.push(_a2.splice(idx, 1)[0]);
+  });
+  return common;
+}
+
+
+intersection(['a', 1], [true, 'a', 15]) //=> ['a']
+//  a1.filter(item => a2.includes(item) ? common.push(a2.indexOf(item)) : [])
+ // const filteredArray = array1.filter(value => array2.includes(value) ? filteredArray : arr)
 /*-----------------------------------------------------------------------------
 Challenge: 23-balancedBrackets
 
@@ -798,7 +865,23 @@ balancedBrackets( '[{}]' ) // => true
 balancedBrackets( '[(])' ) // => false
 balancedBrackets( '[({}[])]' ) // => true
 -----------------------------------------------------------------------------*/
-// Your solution for 23-balancedBrackets here:
+// Your solution for 23-balancedBrackets here: STUDY!!!!!
+
+// function balancedBrackets(s){
+//   let array = []
+//   if(s.includes( '()' || "{}" || "[]")){
+//     return 'balanced'
+//   } else {
+//     return false
+//   }
+// }
+function balancedBrackets(str) {
+    var a = [];
+    return str.split('').every(c => '([{'.includes(c) ? a.push(c) : '() {} []'.includes(a.pop() + c));
+  }
+balancedBrackets( '(]' ) 
+balancedBrackets( '()' ) 
+balancedBrackets( '[{}]' ) 
 
 /*-----------------------------------------------------------------------------
 Challenge: 24-isWinningTicket
@@ -824,7 +907,11 @@ isWinningTicket( [ ['ABC', 999], ['XY', 89] ] ) // => false
 isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] ) // => true
 isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] ) // => false
 -----------------------------------------------------------------------------*/
-// Your solution for 24-isWinningTicket here:
+// Your solution for 24-isWinningTicket here: !!!!!!!!!!!
+function isWinningTicket(ticket){
+    return ticket.every(t => t[0].includes(String.fromCharCode(t[1])));
+  }
+  isWinningTicket( [ ['ABC', 999], ['XY', 89] ] )
 
 /*-----------------------------------------------------------------------------
 Challenge: 25-getNumForIP
@@ -852,6 +939,13 @@ getNumForIP( '10.0.0.1' ) // => 167772161
 -----------------------------------------------------------------------------*/
 // Your solution for 25-getNumForIP here:
 
+function getNumForIP(arr){
+return arr.split('.').reverse().reduce((sum, cv, idx) => sum + parseInt(cv) * 256**idx, 0)
+}
+getNumForIP( '192.156.99.15' )
+getNumForIP( '0.0.2.0' )
+getNumForIP( '0.0.0.1' )
+
 /*-----------------------------------------------------------------------------
 Challenge: 26-toCamelCase
 
@@ -875,8 +969,18 @@ toCamelCase( 'banana_Turkey_potato' ) // => 'bananaTurkeyPotato'
 toCamelCase( 'Mama-mia' ) // => 'MamaMia'
 toCamelCase( 'A_b_c' ) // => 'ABC'
 -----------------------------------------------------------------------------*/
-// Your solution for 26-toCamelCase here:
+// Your solution for 26-toCamelCase here:!!!!!!!!!!!!!!
 
+function toCamelCase(str){
+
+  var regExp =/[-_]\w/ig;
+
+  return str.replace(regExp,function(match){
+        return match.charAt(1).toUpperCase();
+   });
+}
+
+toCamelCase( 'banana_Turkey_potato' ) 
 /*-----------------------------------------------------------------------------
 Challenge: 27-countTheBits
 
@@ -902,31 +1006,36 @@ countTheBits( 255 ) //=> 8
 countTheBits( 65535 ) //=> 16
 -----------------------------------------------------------------------------*/
 // Your solution for 27-countTheBits here:
-
+function countTheBits(arg){
+  n = arg.toString(2).replace(/0/g, "").split("")
+  let count = 0
+  for( let i = 0; i < n.length; i++){ 
+  count+= parseInt(n[i])
+  }
+  return count
+}
+countTheBits( 255 )
+countTheBits( 0 ) 
+countTheBits( 13 )
 /*-----------------------------------------------------------------------------
 Challenge: 28-gridTrip
-
 Difficulty: Intermediate
-
 Prompt:
-
 - This challenge uses an imaginary grid where the y coordinate increases when you move up and decreases when you move down. Similarly, the x coordinate increases when you move right and decreases when you move left.
 - Write a function called gridTrip that accepts two arguments.
 - The first argument is an array containing two integers. The value in the first index of the array represents the starting x position on the grid. The second value in the array represents the starting y position.
 - The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to mean moving Up, Down, Right & Left, respectively. Each direction character is followed by digits representing how many units to move in that direction. For example, a string of 'D15R2U4' moves up 15 units, right 2 units, and finally, down 4 units from the starting coordinates.
 - The direction characters will always be upper case.
 - The gridTrip function should return a new array of two integers: the final x position and the final y position. Do not modify the array argument).
-
 Hint:
 - Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction. Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
-
 Examples:
-
-gridTrip( [0, 0], 'U2R1' ) // => [2, 1]
+gridTrip( [0, 0], 'U2R1' ) // => [1, 2]
 gridTrip( [10, 5], 'D5L15U2' ) //-> [-5, 2]
 gridTrip( [100, -22], 'L2L15D50U1D9') //=> [83, -80]
 -----------------------------------------------------------------------------*/
 // Your solution for 28-gridTrip here:
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 29-addChecker
