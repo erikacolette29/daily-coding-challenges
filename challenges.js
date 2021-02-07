@@ -1022,11 +1022,30 @@ Challenge: 28-gridTrip
 Difficulty: Intermediate
 Prompt:
 - This challenge uses an imaginary grid where the y coordinate increases when you move up and decreases when you move down. Similarly, the x coordinate increases when you move right and decreases when you move left.
+
+y - up and down - increase and decrease
+x - left and right, increase and decreases 
+
 - Write a function called gridTrip that accepts two arguments.
 - The first argument is an array containing two integers. The value in the first index of the array represents the starting x position on the grid. The second value in the array represents the starting y position.
+
+[x, y] starting points
+
+
 - The second argument is a string representing "moves" using the characters 'U', 'D', 'R' & 'L' to mean moving Up, Down, Right & Left, respectively. Each direction character is followed by digits representing how many units to move in that direction. For example, a string of 'D15R2U4' moves up 15 units, right 2 units, and finally, down 4 units from the starting coordinates.
+U', 'D', 'R' & 'L'
+[moves units to move in that direction]
+
 - The direction characters will always be upper case.
+
+// .toUpperCase()
+
 - The gridTrip function should return a new array of two integers: the final x position and the final y position. Do not modify the array argument).
+
+// parseInt
+// don't modify array let newA = [...a]
+// return newArray - [a,b] - final positions for x and y
+
 Hint:
 - Using the String.match method to return an array of regular expression matches can be helpful if you want to break the single string of moves into an array of distinct moves by direction. Be sure to use the global flag, e.g. /cat/g, when defining the regexp.
 Examples:
@@ -1034,9 +1053,35 @@ gridTrip( [0, 0], 'U2R1' ) // => [1, 2]
 gridTrip( [10, 5], 'D5L15U2' ) //-> [-5, 2]
 gridTrip( [100, -22], 'L2L15D50U1D9') //=> [83, -80]
 -----------------------------------------------------------------------------*/
-// Your solution for 28-gridTrip here:
+// Your solution for 28-gridTrip here: STUDY NO CLUE HOW TO~~~!!!!
+
+// function gridTrip(a,b){
+// let x = 0
+// let y = 0
+
+// let newA = [...a]
+// let newB = b.toUpperCase()
+
+// if( b.includes('U', 'D', 'R', 'L')){
+
+// }
 
 
+// }
+
+function gridTrip(xyArr, moves) {
+  var result = [xyArr[0], xyArr[1]];
+  const lookup = {'R': [0, 1], 'U': [1, 1], 'L': [0, -1], 'D': [1, -1]}; 
+  moves = moves.match(/[UDLR]\d+/g);
+  moves.forEach(function(move) {
+    var dir = move.charAt(0);
+    result[lookup[dir][0]] += move.substr(1) * lookup[dir][1];
+  });
+  return result;
+}
+
+
+gridTrip( [0, 0], 'U2R1' ) 
 /*-----------------------------------------------------------------------------
 Challenge: 29-addChecker
 
@@ -1046,9 +1091,20 @@ Prompt:
 
 - Write a function called addChecker that accepts two arguments.
 - The first argument is an array containing at least two integers. The integers in the array have been pre-sorted in ascending order.
+
+sorted
+
 - The second argument is an integer.
+
 - The addChecker function should return true if there are two integers in the array of integers (first argument) that, when added together, equals the integer passed in as the second argument.
+
+[x,y], v
+x + y = v - true
+return boolean
+
 - If there are no two integers in the array with a sum equal to the second argument, addChecker should return false.
+
+x+ y != v - false
 
 Hint:
 
@@ -1061,7 +1117,28 @@ addChecker( [-3, 2], 9 ) // => false
 addChecker( [10, 15, 16, 22], 32 ) // => true
 addChecker( [10, 15, 16, 22], 19 ) // => false
 -----------------------------------------------------------------------------*/
-// Your solution for 29-addChecker here:
+// Your solution for 29-addChecker here: STUDYYYYYY nested array
+
+function addChecker(a1,a2){
+
+for(i = 0; i < a1.length -1 ; i++){
+  for(c = i + 1; c < a1.length; c ++){
+    if(a1[i] + a1[c] === a2) return true;
+  }
+}
+return false 
+} 
+addChecker( [10, 15, 16, 22], 32 )
+addChecker( [-3, 2], 9 )
+addChecker( [1, 2], 3 )
+
+
+
+// let idx = a1[0] + a1.length
+// if( a1[idx] === a2){
+//   return true
+// }
+// return false
 
 /*-----------------------------------------------------------------------------
 Challenge: 30-totalTaskTime
@@ -1072,7 +1149,14 @@ Prompt:
 
 - Write a function called totalTaskTime that accepts two arguments.
 - The first argument is an array of integers referred to as a "queue". Each integer in the queue represents a "task" - specifically, the amount of time to complete that task.
+
+amount of time first arg
+
+
 - The second argument is an integer representing the number of CPU "threads" available to process all of the tasks in the queue.
+
+amount of cpu threads available 
+
 - The totalTaskTime function should return an integer representing the total time it will take to complete all of the tasks in the queue.
 - You may mutate the "queue" array (first argument) if you wish.
 
@@ -1090,3 +1174,11 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------------------*/
 // Your solution for 30- here:
+
+function totalTaskTime(queue, threads){
+  let totalTime = 0
+
+
+  return totalTime
+
+}
